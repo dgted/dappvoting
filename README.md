@@ -183,4 +183,4 @@ MIT License
 
 ## 🙋 Author
 
-Developed by [Your Name](https://github.com/your-username)
+Developed by [Sagar Shourov Roy](https://www.sagarroy.com)
