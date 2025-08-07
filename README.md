@@ -128,27 +128,15 @@ npm install @coral-xyz/anchor @solana/web3.js
 
 ### Connect to Solana Program
 
-Create a file like `utils/connection.js`:
+Create a file like `config.js`:
 
 ```js
-import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
-import { Program, AnchorProvider } from '@coral-xyz/anchor';
-import idl from './idl/your_program.json';
+export const API_URL = 'https://api-voting.sagarroy.com';
 
-const programId = new PublicKey('YOUR_PROGRAM_ID');
-const network = clusterApiUrl('devnet');
+import { PublicKey } from '@solana/web3.js';
 
-const connection = new Connection(network, 'processed');
+export const PROGRAM_ID = new PublicKey('22CajwZNPM3JbcrCpdgPi4a2V3YQ4GF8EQiACkgTHsMg');
 
-const provider = new AnchorProvider(
-  connection,
-  window.solana,
-  { preflightCommitment: 'processed' }
-);
-
-const program = new Program(idl, programId, provider);
-
-export { connection, provider, program };
 ```
 
 ### Run React App
